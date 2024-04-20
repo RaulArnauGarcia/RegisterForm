@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doownload Button with Progres Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h4 class="register-title">Register</h4>
+      <form class="form-register-Inputs">
+        <div class="userName">
+          <img class="imgUserName" src="userName.png" />
+          <label class="labelUserName" for="#">UserName</label>
+          <input class="userName-input" type="text" />
+        </div>
+        <div class="emailContainer">
+          <img class="imgEmail" src="email.png" />
+          <label class="labelEmail" for="#">Email</label>
+          <input class="email-title" type="email" />
+        </div>
+        <div class="passwordContainer">
+          <img class="imgPassword" src="password.png" />
+          <label class="labelPassword" for="#">Password</label>
+          <input class="password-title" type="password" />
+        </div>
+        <div class="confirmContainer">
+          <img class="imgPassword" src="password.png" />
+          <label class="labelConfirm" for="#">Confirm Password</label>
+          <input class="confirm-password-title" type="password" />
+        </div>
+        <div class="cont-CheckBox">
+          <input class="check-Input" type="checkbox" />
+          <h4 class="check-title">I agree to the terms & conditions</h4>
+        </div>
+        <button class="button-title" type="submit">Register</button>
+      </form>
+      <h4 class="ask-login">Already have on account ? Login</h4>
+    </div>
+    <script>
+      let buttonFocus = document.querySelector(".userName-input");
+      let labelUserName = document.querySelector(".labelUserName");
+      let labelEmail = document.querySelector(".labelEmail");
+      let emailTitle = document.querySelector(".email-title");
+      let passwordTitle = document.querySelector(".password-title");
+      let labelPassword = document.querySelector(".labelPassword");
+      let confirmPassword = document.querySelector(".confirm-password-title");
+      let labelConfirm = document.querySelector(".labelConfirm");
+
+      buttonFocus.addEventListener("focus", () => {
+        labelUserName.classList.add("activeLabel");
+        buttonFocus.classList.add("inputborder");
+      });
+
+      emailTitle.addEventListener("focus", () => {
+        labelEmail.classList.add("activeLabelEmail");
+        emailTitle.classList.add("inputborder");
+      });
+
+      passwordTitle.addEventListener("focus", () => {
+        labelPassword.classList.add("activeLabelPassword");
+        passwordTitle.classList.add("inputborder");
+      });
+
+      confirmPassword.addEventListener("focus", () => {
+        labelConfirm.classList.add("activeLabelConfirm");
+        confirmPassword.classList.add("inputborder");
+      });
+
+      // Evento cuando se introduce algo en el campo de entrada
+      buttonFocus.addEventListener("input", () => {
+        if (buttonFocus.value.trim() !== "") {
+          labelUserName.classList.add("activeLabel");
+          buttonFocus.classList.add("inputborder");
+        } else if (document.activeElement !== buttonFocus) {
+          labelUserName.classList.remove("activeLabel");
+          buttonFocus.classList.remove("inputborder");
+        }
+      });
+
+      emailTitle.addEventListener("input", () => {
+        if (emailTitle.value.trim() !== "") {
+          labelEmail.classList.add("activeLabelEmail");
+          emailTitle.classList.add("inputborder");
+        } else if (document.activeElement !== emailTitle) {
+          labelEmail.classList.remove("activeLabelEmail");
+          emailTitle.classList.remove("inputborder");
+        }
+      });
+
+      passwordTitle.addEventListener("input", () => {
+        if (passwordTitle.value.trim() !== "") {
+          labelPassword.classList.add("activeLabelPassword");
+          passwordTitle.classList.add("inputborder");
+        } else if (document.activeElement !== passwordTitle) {
+          labelPassword.classList.remove("activeLabelPassword");
+          passwordTitle.classList.remove("inputborder");
+        }
+      });
+
+      confirmPassword.addEventListener("input", () => {
+        if (confirmPassword.value.trim() !== "") {
+          labelConfirm.classList.add("activeLabelConfirm");
+          confirmPassword.classList.add("inputborder");
+        } else if (document.activeElement !== confirmPassword) {
+          labelConfirm.classList.remove("activeLabelConfirm");
+          confirmPassword.classList.remove("inputborder");
+        }
+      });
+
+      // Evento cuando el campo de entrada pierde el foco
+      buttonFocus.addEventListener("blur", () => {
+        if (buttonFocus.value.trim() === "") {
+          labelUserName.classList.remove("activeLabel");
+          buttonFocus.classList.remove("inputborder");
+        }
+      });
+
+      emailTitle.addEventListener("blur", () => {
+        if (emailTitle.value.trim() === "") {
+          labelEmail.classList.remove("activeLabelEmail");
+          emailTitle.classList.remove("inputborder");
+        }
+      });
+
+      passwordTitle.addEventListener("blur", () => {
+        if (passwordTitle.value.trim() === "") {
+          labelPassword.classList.remove("activeLabelPassword");
+          passwordTitle.classList.remove("inputborder");
+        }
+      });
+
+      confirmPassword.addEventListener("blur", () => {
+        if (confirmPassword.value.trim() === "") {
+          labelConfirm.classList.remove("activeLabelConfirm");
+          confirmPassword.classList.remove("inputborder");
+        }
+      });
+    </script>
+  </body>
+</html>

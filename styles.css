@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(BackGroundImg.jpg);
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgba(62, 65, 68, 0.1);
+  width: 350px;
+  height: 500px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-title {
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.form-register-Inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 80%;
+}
+
+.userName-input {
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none;
+  border-bottom: 2px white solid;
+  padding-bottom: -10px;
+  position: relative;
+}
+
+.email-title {
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none;
+  border-bottom: 2px white solid;
+}
+
+.password-title {
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none;
+  border-bottom: 2px white solid;
+}
+
+.confirm-password-title {
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none;
+  border-bottom: 2px white solid;
+}
+
+.confirm-password-title:focus,
+.password-title:focus,
+.email-title:focus,
+.userName-input:focus {
+  outline: none;
+  border-left: 2px white solid;
+  border-right: 2px white solid;
+  border-bottom: 2px white solid;
+}
+
+.activeLabel::before {
+  content: "";
+  width: 205px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  left: 68px;
+  border-top: 2px white solid;
+  border-right: 2px white solid;
+}
+
+.cont-CheckBox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.check-title {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.check-Input:focus {
+  opacity: 1;
+}
+
+.button-title {
+  width: 100%;
+  height: 30px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ask-login {
+  font-size: 13px;
+}
+
+.userName img {
+  position: absolute;
+  margin-bottom: 5px;
+  width: 25px;
+  margin-left: -30px;
+}
+
+.labelUserName {
+  font-size: 14px;
+  position: absolute;
+  pointer-events: none;
+  margin-left: 5px;
+}
+
+.activeLabel {
+  margin-bottom: 45px;
+  font-size: 12px;
+}
+
+.userName {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.emailContainer {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.imgEmail {
+  position: absolute;
+  margin-bottom: 5px;
+  width: 20px;
+  margin-left: -27px;
+}
+
+.labelEmail {
+  font-size: 14px;
+  position: absolute;
+  pointer-events: none;
+  margin-left: 5px;
+}
+
+.activeLabelEmail {
+  margin-bottom: 45px;
+  font-size: 12px;
+}
+
+.activeLabelEmail::before {
+  content: "";
+  width: 234px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  left: 39px;
+  border-top: 2px white solid ;
+  border-right: 2px white solid;
+}
+
+.inputborder {
+  border-left: 2px white solid;
+  border-right: 2px white solid;
+}
+
+input {
+  align-items: center;
+  padding-left: 5px;
+  color: white;
+}
+
+.passwordContainer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.imgPassword {
+  position: absolute;
+  margin-bottom: 5px;
+  width: 25px;
+  margin-left: -27px;
+}
+
+.labelPassword {
+  font-size: 14px;
+  position: absolute;
+  pointer-events: none;
+  margin-left: 5px;
+}
+
+.confirmContainer {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.labelConfirm {
+  font-size: 14px;
+  position: absolute;
+  pointer-events: none;
+  margin-left: 5px;
+}
+
+.activeLabelPassword::before {
+  content: "";
+  width: 208px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  left: 65px;
+  border-top: 2px white solid;
+  border-right: 2px white solid;
+}
+
+.activeLabelPassword {
+  margin-bottom: 45px;
+  font-size: 12px;
+}
+
+.activeLabelConfirm {
+  margin-bottom: 45px;
+  font-size: 12px;
+}
+
+.activeLabelConfirm::before {
+  content: "";
+  width: 158px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  left: 115px;
+  border-top: 2px white solid;
+  border-right: 2px white solid;
+}
+
+.button-title:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
